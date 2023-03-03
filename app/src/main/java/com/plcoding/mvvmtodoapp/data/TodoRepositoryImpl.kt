@@ -2,10 +2,7 @@ package com.plcoding.mvvmtodoapp.data
 
 import kotlinx.coroutines.flow.Flow
 
-class TodoRepositoryImpl(
-    private val dao: TodoDao
-): TodoRepository {
-
+class TodoRepositoryImpl(private val dao: TodoDao) : TodoRepository {
     override suspend fun insertTodo(todo: Todo) {
         dao.insertTodo(todo)
     }
